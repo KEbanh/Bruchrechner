@@ -1,0 +1,64 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Bruchrechner (Division)</title>
+		
+		<script>
+			"use strict";
+			function fBruchrechner() {
+						
+			//var
+			var Z1;
+			var Z2;
+			var N1;
+			var N2;
+			var ZErg;
+			var NErg;
+			var vAusgabeHtml;
+			
+			Z1= document.getElementById("idZ1").value;
+			Z2= document.getElementById("idZ2").value;
+			N1= document.getElementById("idN1").value;
+			N2= document.getElementById("idN2").value;
+				 
+			ZErg = Z1 * N2;
+			NErg = N1 * Z2;
+			
+			
+	
+			vAusgabeHtml = "";
+			vAusgabeHtml = vAusgabeHtml + "Das Ergebnis aus:    ";
+			vAusgabeHtml = vAusgabeHtml + "( ";
+			vAusgabeHtml = vAusgabeHtml + Z1;
+			vAusgabeHtml = vAusgabeHtml + " / ";
+			vAusgabeHtml = vAusgabeHtml + N1;
+			vAusgabeHtml = vAusgabeHtml + " ) ";
+		
+			vAusgabeHtml = vAusgabeHtml + " : ";
+		
+			vAusgabeHtml = vAusgabeHtml + "( ";
+			vAusgabeHtml = vAusgabeHtml + Z2;
+			vAusgabeHtml = vAusgabeHtml + " / ";
+			vAusgabeHtml = vAusgabeHtml + N2;
+			vAusgabeHtml = vAusgabeHtml + " ) ";
+			vAusgabeHtml = vAusgabeHtml + " = ";
+			vAusgabeHtml = vAusgabeHtml + ZErg;
+			vAusgabeHtml = vAusgabeHtml + " / ";
+			vAusgabeHtml = vAusgabeHtml + NErg;	
+		
+			document.getElementById("idAusgabeHtml").innerHTML = vAusgabeHtml;	
+			}		
+		</script>
+	</head>	
+	<body>
+		<h1>Bruchrechner (Multiplication)</h1>
+		(<input id="idZ1" type="text" value="6">
+		/
+		<input id="idN1" type="text" value="5">)
+		*
+		(<input id="idZ2" type="text" value="3">
+		/
+		<input id="idN2" type="text" value="4">)
+		
+		<button onclick="fBruchrechner();"> Berechne Produkt </button>
+		<div id="idAusgabeHtml"> Ergebnis </div>
+</body></html>
